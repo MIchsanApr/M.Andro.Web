@@ -1,0 +1,1958 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmic ENTJ Dream - Ichsan Universe</title>
+  <link rel="icon" href="zenicblack.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Orbitron:wght@400;700;900&amp;display=swap" rel="stylesheet">
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --cosmic-black: #0B0C2A;
+            --deep-violet: #3D2C8D;
+            --neon-blue: #00BFFF;
+            --galaxy-purple: #8A2BE2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--cosmic-black);
+            color: #E6F3FF;
+            overflow-x: hidden;
+        }
+
+        .orbitron {
+            font-family: 'Orbitron', monospace;
+        }
+
+        /* Animated Background */
+        .cosmic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #0B0C2A 0%, #1a1a3a 50%, #2d1b69 100%);
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+           
+            background-repeat: repeat;
+            background-size: 200px 100px;
+            animation: sparkle 20s linear infinite;
+        }
+  .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite ease-in-out;
+  }
+        @keyframes sparkle {
+            from { transform: translateX(0); }
+            to { transform: translateX(-200px); }
+        }
+
+        /* Aurora Effect */
+        .aurora {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                transparent 30%, 
+                rgba(0, 191, 255, 0.1) 50%, 
+                rgba(138, 43, 226, 0.1) 70%, 
+                transparent 90%);
+            animation: aurora-flow 15s ease-in-out infinite;
+        }
+
+        @keyframes aurora-flow {
+            0%, 100% { opacity: 0.3; transform: translateX(-50px) rotate(0deg); }
+            50% { opacity: 0.6; transform: translateX(50px) rotate(2deg); }
+        }
+
+        /* Glass Morphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+        }
+
+        .glass-strong {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 191, 255, 0.3);
+            border-radius: 20px;
+        }
+
+        /* Glow Effects */
+        .glow-blue {
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+        }
+
+        .glow-purple {
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+        }
+
+        /* Hover Effects */
+        .hover-float:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 191, 255, 0.7);
+            transition: all 0.3s ease;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .typing {
+            overflow: hidden;
+            border-right: 2px solid rgba(0, 191, 255, 0.8);
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: rgba(0, 191, 255, 0.8); }
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            from { box-shadow: 0 0 20px rgba(0, 191, 255, 0.5); }
+            to { box-shadow: 0 0 40px rgba(138, 43, 226, 0.8); }
+        }
+
+        /* Particle Effect */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, rgba(0, 191, 255, 0.8) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 0.5; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .typing {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Timeline */
+        .timeline-line {
+            background: linear-gradient(to bottom, transparent, var(--neon-blue), var(--galaxy-purple), transparent);
+            width: 2px;
+            animation: timeline-glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes timeline-glow {
+            from { box-shadow: 0 0 5px rgba(0, 191, 255, 0.5); }
+            to { box-shadow: 0 0 15px rgba(138, 43, 226, 0.8); }
+        }
+
+        .timeline-dot {
+            background: radial-gradient(circle, var(--neon-blue), var(--galaxy-purple));
+            animation: dot-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes dot-pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); }
+            50% { transform: scale(1.2); box-shadow: 0 0 20px rgba(138, 43, 226, 0.8); }
+        }
+
+        /* Card Hover Effects */
+        .card-3d {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+
+        .card-3d:hover {
+            transform: rotateY(5deg) rotateX(5deg) translateZ(20px);
+        }
+
+        /* Picture Hover Effects */
+        .pic-hover {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .pic-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+            z-index: 2;
+        }
+
+        .pic-hover:hover::before {
+            left: 100%;
+        }
+
+        .pic-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 191, 255, 0.4);
+        }
+
+        .pic-hover .pic-content {
+            transition: all 0.3s ease;
+        }
+
+        .pic-hover:hover .pic-content {
+            transform: translateY(-5px);
+        }
+
+        /* Picture Avatar Styles */
+        .pic-avatar {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.2), rgba(138, 43, 226, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .pic-avatar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(0, 191, 255, 0.4), transparent);
+            animation: avatar-rotate 3s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .pic-hover:hover .pic-avatar::before {
+            opacity: 1;
+        }
+
+        .pic-hover:hover .pic-avatar {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(0, 191, 255, 0.6);
+        }
+
+        @keyframes avatar-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Modern Welcome Modal */
+        .welcome-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(20px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.6s ease;
+        }
+
+        .welcome-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .welcome-content {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(30px);
+            border: 2px solid rgba(0, 191, 255, 0.3);
+            border-radius: 25px;
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            transform: scale(0.8) translateY(50px);
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .welcome-modal.show .welcome-content {
+            transform: scale(1) translateY(0);
+        }
+
+        .welcome-content::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--neon-blue), var(--galaxy-purple), var(--neon-blue));
+            border-radius: 25px;
+            z-index: -1;
+            animation: welcome-border-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes welcome-border-glow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .welcome-title {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--neon-blue), var(--galaxy-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            animation: title-glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes title-glow {
+            from { filter: drop-shadow(0 0 10px rgba(0, 191, 255, 0.5)); }
+            to { filter: drop-shadow(0 0 20px rgba(138, 43, 226, 0.8)); }
+        }
+
+        .welcome-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .journey-btn {
+            background: linear-gradient(45deg, var(--neon-blue), var(--galaxy-purple));
+            border: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .journey-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 191, 255, 0.4);
+        }
+
+        .journey-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .journey-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Constellation Effect */
+        .constellation-node {
+            position: relative;
+            background: radial-gradient(circle, rgba(0, 191, 255, 0.8), rgba(138, 43, 226, 0.6));
+            border-radius: 50%;
+            animation: node-glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes node-glow {
+            from { box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); }
+            to { box-shadow: 0 0 25px rgba(138, 43, 226, 0.9); }
+        }
+
+        /* Floating Animation */
+        .float {
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Button Styles */
+        .cosmic-btn {
+            background: linear-gradient(45deg, var(--neon-blue), var(--galaxy-purple));
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cosmic-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 191, 255, 0.4);
+        }
+
+        .cosmic-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cosmic-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Enhanced Slider Styles */
+        .cosmic-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 191, 255, 0.2);
+        }
+
+        .slider-container {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .slider-item {
+            min-width: 100%;
+            position: relative;
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.1), rgba(138, 43, 226, 0.1));
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            margin: 10px;
+            padding: 30px;
+            transition: all 0.4s ease;
+        }
+
+        .slider-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 191, 255, 0.3);
+        }
+
+        .slider-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .slider-dot.active {
+            background: var(--neon-blue);
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.8);
+        }
+
+        .slider-dot::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .slider-dot.active::before {
+            border-color: rgba(0, 191, 255, 0.5);
+            animation: dot-pulse-ring 2s ease-in-out infinite;
+        }
+
+        @keyframes dot-pulse-ring {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+        }
+
+        .slider-arrows {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 191, 255, 0.3);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .slider-arrows:hover {
+            background: rgba(0, 191, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-prev {
+            left: 20px;
+        }
+
+        .slider-next {
+            right: 20px;
+        }
+
+        /* Big Static Blackhole - Enhanced Cartoonish Modern Design */
+        .blackhole {
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .blackhole-core {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 140px;
+            height: 140px;
+            background: radial-gradient(
+                circle at 30% 30%, 
+                rgba(20, 20, 20, 0.8) 0%, 
+                rgba(0, 0, 0, 0.95) 30%, 
+                rgba(0, 0, 0, 1) 60%, 
+                rgba(0, 0, 0, 1) 100%
+            );
+            border-radius: 50%;
+            animation: blackhole-pulse 3s ease-in-out infinite;
+            box-shadow: 
+                inset 0 0 60px rgba(0, 0, 0, 1),
+                inset 0 0 100px rgba(0, 0, 0, 1),
+                0 0 120px rgba(0, 0, 0, 0.9),
+                0 0 200px rgba(0, 0, 0, 0.6),
+                0 0 300px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(0, 0, 0, 0.8);
+        }
+
+        /* Enhanced Accretion Disk Rings */
+        .blackhole-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 4px solid;
+            animation: blackhole-rotate 6s linear infinite;
+            filter: blur(0.5px);
+        }
+
+        .blackhole-ring:nth-child(1) {
+            width: 180px;
+            height: 180px;
+            border-color: rgba(255, 140, 0, 0.9);
+            border-width: 6px;
+            animation-duration: 2s;
+            box-shadow: 
+                0 0 40px rgba(255, 140, 0, 0.6),
+                inset 0 0 20px rgba(255, 140, 0, 0.3);
+            border-style: dashed;
+            border-dash-array: 10px 5px;
+        }
+
+        .blackhole-ring:nth-child(2) {
+            width: 220px;
+            height: 220px;
+            border-color: rgba(119, 30, 202, 0.8);
+            border-width: 5px;
+            animation-duration: 2.5s;
+            animation-direction: reverse;
+            box-shadow: 
+                0 0 50px rgba(142, 38, 211, 0.5),
+                inset 0 0 25px rgba(69, 1, 75, 0.2);
+        }
+
+        .blackhole-ring:nth-child(3) {
+            width: 270px;
+            height: 270px;
+            border-color: rgba(107, 20, 220, 0.7);
+            border-width: 4px;
+            animation-duration: 3s;
+            box-shadow: 
+                0 0 60px rgba(127, 25, 243, 0.4),
+                inset 0 0 30px rgba(54, 0, 104, 0.2);
+        }
+
+        .blackhole-ring:nth-child(4) {
+            width: 320px;
+            height: 320px;
+            border-color: rgba(138, 43, 226, 0.6);
+            border-width: 3px;
+            animation-duration: 3.5s;
+            animation-direction: reverse;
+            box-shadow: 
+                0 0 70px rgba(138, 43, 226, 0.3),
+                inset 0 0 35px rgba(138, 43, 226, 0.15);
+        }
+
+        .blackhole-ring:nth-child(5) {
+            width: 380px;
+            height: 380px;
+            border-color: rgba(75, 0, 130, 0.5);
+            border-width: 2px;
+            animation-duration: 4s;
+            box-shadow: 
+                0 0 80px rgba(75, 0, 130, 0.2),
+                inset 0 0 40px rgba(75, 0, 130, 0.1);
+        }
+
+        .blackhole-ring:nth-child(6) {
+            width: 440px;
+            height: 440px;
+            border-color: rgba(25, 25, 112, 0.4);
+            border-width: 1px;
+            animation-duration: 4.5s;
+            animation-direction: reverse;
+            box-shadow: 
+                0 0 90px rgba(25, 25, 112, 0.15),
+                inset 0 0 45px rgba(25, 25, 112, 0.08);
+        }
+
+        @keyframes blackhole-rotate {
+            from { 
+                transform: translate(-50%, -50%) rotate(0deg) scale(1); 
+            }
+            25% { 
+                transform: translate(-50%, -50%) rotate(90deg) scale(1.02); 
+            }
+            50% { 
+                transform: translate(-50%, -50%) rotate(180deg) scale(1); 
+            }
+            75% { 
+                transform: translate(-50%, -50%) rotate(270deg) scale(0.98); 
+            }
+            to { 
+                transform: translate(-50%, -50%) rotate(360deg) scale(1); 
+            }
+        }
+
+        @keyframes blackhole-pulse {
+            0%, 100% { 
+                transform: translate(-50%, -50%) scale(1);
+                box-shadow: 
+                    inset 0 0 60px rgba(0, 0, 0, 1),
+                    inset 0 0 100px rgba(0, 0, 0, 1),
+                    0 0 120px rgba(0, 0, 0, 0.9),
+                    0 0 200px rgba(0, 0, 0, 0.6),
+                    0 0 300px rgba(0, 0, 0, 0.3);
+            }
+            50% { 
+                transform: translate(-50%, -50%) scale(1.05);
+                box-shadow: 
+                    inset 0 0 80px rgba(0, 0, 0, 1),
+                    inset 0 0 120px rgba(0, 0, 0, 1),
+                    0 0 180px rgba(0, 0, 0, 0.95),
+                    0 0 280px rgba(0, 0, 0, 0.8),
+                    0 0 400px rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        /* Nearby Stars being consumed - Fixed alignment */
+        .nearby-star {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(246, 250, 255, 0.8) 50%, transparent 100%);
+            border-radius: 50%;
+            box-shadow: 
+                0 0 15px rgba(255, 255, 255, 0.8),
+                0 0 30px rgba(255, 215, 0, 0.6),
+                0 0 45px rgba(255, 215, 0, 0.3);
+            animation: star-consumed 8s ease-in infinite;
+            transform-origin: 0 0;
+        }
+
+        .nearby-star::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: star-twinkle 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes star-consumed {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(350px) scale(1);
+                opacity: 1;
+            }
+            20% {
+                opacity: 1;
+                transform: translate(-50%, -50%) rotate(72deg) translateX(320px) scale(1);
+            }
+            40% {
+                opacity: 0.9;
+                transform: translate(-50%, -50%) rotate(144deg) translateX(280px) scale(0.9);
+            }
+            60% {
+                opacity: 0.7;
+                transform: translate(-50%, -50%) rotate(216deg) translateX(220px) scale(0.7);
+            }
+            80% {
+                opacity: 0.4;
+                transform: translate(-50%, -50%) rotate(288deg) translateX(150px) scale(0.4);
+            }
+            95% {
+                opacity: 0.1;
+                transform: translate(-50%, -50%) rotate(350deg) translateX(80px) scale(0.1);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) rotate(360deg) translateX(70px) scale(0);
+            }
+        }
+
+        @keyframes star-twinkle {
+            from { opacity: 0.6; transform: scale(1); }
+            to { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Light particles being stretched and consumed - Fixed alignment */
+        .light-particle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 3px;
+            height: 12px;
+            background: linear-gradient(to top, 
+                rgba(255, 255, 255, 1) 0%, 
+                rgba(0, 191, 255, 0.8) 10%, 
+                transparent 100%);
+            border-radius: 50%;
+            animation: light-stretch 6s ease-in infinite;
+            transform-origin: 0 0;
+        }
+
+        @keyframes light-stretch {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(300px) scaleY(1);
+                opacity: 0.8;
+            }
+            30% {
+                transform: translate(-50%, -50%) rotate(108deg) translateX(250px) scaleY(2);
+                opacity: 0.9;
+            }
+            60% {
+                transform: translate(-50%, -50%) rotate(216deg) translateX(180px) scaleY(4);
+                opacity: 0.7;
+            }
+            85% {
+                transform: translate(-50%, -50%) rotate(306deg) translateX(100px) scaleY(8);
+                opacity: 0.3;
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(70px) scaleY(12);
+                opacity: 0;
+            }
+        }
+
+        /* Enhanced gravitational lensing effect */
+        .gravitational-lens {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(
+                circle at center,
+                transparent 0%,
+                transparent 60%,
+                rgba(0, 191, 255, 0.05) 70%,
+                rgba(138, 43, 226, 0.05) 80%,
+                rgba(255, 255, 255, 0.02) 90%,
+                transparent 100%
+            );
+            animation: lens-distortion 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes lens-distortion {
+            0%, 100% { 
+                transform: translate(-50%, -50%) scale(1); 
+                opacity: 0.3;
+            }
+            50% { 
+                transform: translate(-50%, -50%) scale(1.1); 
+                opacity: 0.6;
+            }
+        }
+
+        /* White hole animation for journey start */
+        .whitehole {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 191, 255, 0.8) 30%, rgba(138, 43, 226, 0.6) 60%, transparent 100%);
+            border-radius: 50%;
+            z-index: 3000;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .whitehole.active {
+            animation: whitehole-expand 1.6s ease-out forwards;
+        }
+
+        @keyframes whitehole-expand {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+            30% {
+                width: 200px;
+                height: 200px;
+                opacity: 1;
+            }
+            70% {
+                width: 130vw;
+                height: 130vh;
+                opacity: 3.9;
+            }
+            100% {
+                width: 350vw;
+                height: 350vh;
+                opacity: 0;
+            }
+        }
+
+        /* Animated Profile Picture */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.3), rgba(138, 43, 226, 0.3));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px auto;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            border: 3px solid rgba(0, 191, 255, 0.5);
+            box-shadow: 
+                0 0 30px rgba(0, 191, 255, 0.4),
+                inset 0 0 30px rgba(138, 43, 226, 0.2);
+            animation: profile-float 6s ease-in-out infinite;
+        }
+
+        .profile-pic::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent,
+                rgba(0, 191, 255, 0.6),
+                transparent,
+                rgba(138, 43, 226, 0.6),
+                transparent
+            );
+            animation: profile-rotate 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .profile-pic:hover::before {
+            opacity: 1;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.1) rotateY(10deg);
+            box-shadow: 
+                0 0 50px rgba(0, 191, 255, 0.8),
+                0 0 100px rgba(138, 43, 226, 0.4),
+                inset 0 0 50px rgba(0, 191, 255, 0.3);
+            border-color: rgba(138, 43, 226, 0.8);
+        }
+
+        .profile-pic .profile-emoji {
+            font-size: 4rem;
+            z-index: 2;
+            position: relative;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 0 10px rgba(0, 191, 255, 0.5));
+        }
+
+        .profile-pic:hover .profile-emoji {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 20px rgba(138, 43, 226, 0.8));
+        }
+
+        @keyframes profile-float {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg); 
+            }
+            33% { 
+                transform: translateY(-10px) rotate(2deg); 
+            }
+            66% { 
+                transform: translateY(5px) rotate(-1deg); 
+            }
+        }
+
+        @keyframes profile-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Profile pic responsive */
+        @media (max-width: 768px) {
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .profile-pic .profile-emoji {
+                font-size: 3rem;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body><!-- Cosmic Background -->
+  <div class="cosmic-bg">
+   <div class="stars"></div>
+   <div class="aurora"></div>
+   
+  </div><!-- Floating Particles -->
+  <div id="particles-container" class="fixed inset-0 pointer-events-none z-10"></div><!-- Big Static Blackhole -->
+  <div class="blackhole">
+   <div class="gravitational-lens"></div>
+   <div class="blackhole-ring"></div>
+   <div class="blackhole-ring"></div>
+   <div class="blackhole-ring"></div>
+   <div class="blackhole-ring"></div>
+   <div class="blackhole-ring"></div>
+   <div class="blackhole-ring"></div>
+   <div class="blackhole-core"></div>
+   <div id="nearby-stars"></div>
+   <div id="light-particles"></div>
+   <div id="blackhole-particles"></div>
+  </div><!-- Welcome Modal -->
+  <div id="welcome-modal" class="welcome-modal">
+    
+   <div class="welcome-content">
+    <img src="zwhitbg.png" alt="Logo" class="center" style="width: 120px;">
+   <style>.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}</style>
+    <h1 class="welcome-title orbitron">COSMIC ENTJ</h1>
+    <p class="welcome-subtitle">Hey there, traveler - you’ve just entered my orbit 🌌
+Where dreams turn digital, and an ENTJ dreamer builds galaxies out of code and color.</p><button id="playBtn" class="journey-btn">Start the music! <i class="bi bi-cassette" style="width: 20px;"></i></button><br><br>
+<audio id="lagu" src="My Love Mine All Mine X No.1 Party Anthem [Mashup] - apollw.mp3"></audio>
+
+
+<script>
+  const btn = document.getElementById("playBtn");
+  const lagu = document.getElementById("lagu");
+
+  btn.addEventListener("click", () => {
+    lagu.play();
+  });
+</script><button class="journey-btn" onclick="startJourney()"> Start The Journey </button><br><br>
+<p class="text-sm opacity-70">Jika kamu menggunakan dekstop, silahkan menuju ke dekstop versionnn</p><br>
+<button class="journey-btn"><a href="https://michsanapr.github.io/M.Dekstop.Web/index.html">Dekstop Version</a></button>
+   </div>
+  </div><!-- White Hole Effect -->
+  <div id="whitehole" class="whitehole"></div><!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 glass p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <img src="zwhite.png" alt="" style="width: 27px;">
+    <div class="orbitron text-xl font-bold text-glow" style="margin-right: 1100px;">
+    M.
+    </div>
+    <div class="hidden md:flex space-x-6"><a href="#hero" class="hover:text-glow transition-all">Home</a> <a href="#about" class="hover:text-glow transition-all">About</a> <a href="#skills" class="hover:text-glow transition-all">Skills</a> <a href="#dreams" class="hover:text-glow transition-all">Dreams</a> <a href="#contact" class="hover:text-glow transition-all">Contact</a>
+    </div>
+   </div>
+  </nav><!-- Hero Section -->
+  <section id="hero" class="min-h-screen flex items-center justify-center relative">
+   <div class="text-center z-20 px-4"><!-- Animated Profile Picture -->
+    <div class="profile-pic" onclick="profilePicClick()">
+     <div class="profile-emoji">
+      <img src="Untitled.png" alt="">
+     </div>
+    </div>
+    <div class="mb-8">
+     <h1 id="main-title" class="text-4xl md:text-6xl font-bold orbitron text-glow mb-4">M. Ichsan Apriansyah</h1>
+     <p id="subtitle" class="text-l md:text-1xl typing max-w-1xl mx-auto">ENTJ-T • Web Designer • Illustrator • Comic Author</p>
+    </div><button class="cosmic-btn hover-float mt-8" onclick="scrollToSection('about')"> Enter The Cosmos </button>
+   </div><!-- Floating Elements -->
+   <div class="absolute top-20 left-10 w-20 h-20 constellation-node float opacity-30"></div>
+   <div class="absolute bottom-32 right-16 w-16 h-16 constellation-node float opacity-40" style="animation-delay: -2s;"></div>
+   <div class="absolute top-1/2 left-1/4 w-12 h-12 constellation-node float opacity-25" style="animation-delay: -4s;"></div>
+  </section><!-- About Section -->
+  <section id="about" class="py-20 px-4">
+   <div class="container mx-auto max-w-4xl">
+    <div class="glass-strong p-8 md:p-12 reveal hover-float">
+     <h2 id="about-title" class="text-3xl md:text-4xl font-bold orbitron text-center mb-8 text-glow">About Me</h2>
+     <div class="flex flex-col md:flex-row items-center gap-8">
+      <div class="w-48 h-48 glass rounded-full flex items-center justify-center glow-blue">
+       <div class="text-6xl">
+        <img src="aboutme.png" alt="" style="border-radius: 50%;">
+       </div>
+      </div>
+      <div class="flex-1 text-center md:text-left">
+       <p id="about-description" class="text-lg md:text-xl leading-relaxed mb-6">Yo! I make pixels do cool things and drawings come alive
+Creativity’s my fav way to mix vibes, meaning, and a lil bit of madness.</p>
+       <p class="text-base opacity-80">Sometimes I feel like a forgotten star still glowing, but out of reach.
+I build worlds from silence, stories from light,
+and I keep wondering if meaning’s just another constellation I drew myself.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Skills Section -->
+  <section id="skills" class="py-20 px-4">
+   <div class="container mx-auto max-w-6xl">
+    <h2 class="text-3xl md:text-4xl font-bold orbitron text-center mb-12 text-glow reveal">Constellations</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+     <div class="glass p-6 card-3d hover-glow pic-hover reveal">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4">
+        <div class="text-4xl">
+         <img src="images/skills/illus.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-xl font-semibold mb-2 text-center">Digital Illustration</h3>
+       <p class="text-sm opacity-80 text-center">turning stardust and sketches into stories that glow.</p>
+      </div>
+     </div>
+     <div class="glass p-6 card-3d hover-glow pic-hover reveal" style="animation-delay: 0.2s;">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4">
+        <div class="text-4xl">
+         <img src="images/skills/webdes.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-xl font-semibold mb-2 text-center">Web Design</h3>
+       <p class="text-sm opacity-80 text-center">where code and creativity collide together in orbit</p>
+      </div>
+     </div>
+     <div class="glass p-6 card-3d hover-glow pic-hover reveal" style="animation-delay: 0.4s;">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4">
+        <div class="text-4xl">
+         <img src="images/skills/frontend.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-xl font-semibold mb-2 text-center">Frontend Development</h3>
+       <p class="text-sm opacity-80 text-center">building galaxies from HTML, CSS, and a bit of caffeine</p>
+      </div>
+     </div>
+     <div class="glass p-6 card-3d hover-glow pic-hover reveal" style="animation-delay: 0.6s;">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4">
+        <div class="text-4xl">
+         <img src="images/skills/uiux.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-xl font-semibold mb-2 text-center">UI/UX Design</h3>
+       <p class="text-sm opacity-80 text-center">crafting constellations that people can actually click</p>
+      </div>
+     </div>
+     <div class="glass p-6 card-3d hover-glow pic-hover reveal" style="animation-delay: 0.8s;">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4">
+        <div class="text-4xl">
+         <img src="images/skills/lore.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-xl font-semibold mb-2 text-center">Lore Building</h3>
+       <p class="text-sm opacity-80 text-center">I weave stories between stars and empty space.</p>
+      </div>
+     </div>
+     <div class="glass p-6 card-3d hover-glow pic-hover reveal" style="animation-delay: 1s;">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4">
+        <div class="text-4xl">
+         <img src="images/skills/edit.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-xl font-semibold mb-2 text-center">Visual Editing</h3>
+       <p class="text-sm opacity-80 text-center">because still images deserve to breathe and move</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Dreams Timeline -->
+  <section id="dreams" class="py-20 px-4">
+   <div class="container mx-auto max-w-4xl">
+    <h2 class="text-3xl md:text-4xl font-bold orbitron text-center mb-12 text-glow reveal">Celestial Path</h2>
+    <div class="relative">
+     <div class="timeline-line absolute left-1/2 transform -translate-x-1/2 h-full"></div>
+     <div class="space-y-12">
+      <div class="flex items-center reveal">
+       <div class="flex-1 text-right pr-8">
+        <div class="glass p-4 hover-float">
+         <h3 class="font-semibold text-lg">Create Beyond Limits</h3>
+         <p class="text-sm opacity-80">"My visions don’t fade—they evolve with the stars"</p>
+        </div>
+       </div>
+       <div class="timeline-dot w-4 h-4 rounded-full relative z-10"></div>
+       <div class="flex-1 pl-8"></div>
+      </div>
+      <div class="flex items-center reveal">
+       <div class="flex-1 pr-8"></div>
+       <div class="timeline-dot w-4 h-4 rounded-full relative z-10"></div>
+       <div class="flex-1 text-left pl-8">
+        <div class="glass p-4 hover-float">
+         <h3 class="font-semibold text-lg">Evolve Endlessly</h3>
+         <p class="text-sm opacity-80">"Every experience is a star in my constellation"</p>
+        </div>
+       </div>
+      </div>
+      <div class="flex items-center reveal">
+       <div class="flex-1 text-right pr-8">
+        <div class="glass p-4 hover-float">
+         <h3 class="font-semibold text-lg">Collide Authentically</h3>
+         <p class="text-sm opacity-80">"Growth isn’t linear, it’s orbital"</p>
+        </div>
+       </div>
+       <div class="timeline-dot w-4 h-4 rounded-full relative z-10"></div>
+       <div class="flex-1 pl-8"></div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+/>
+  </section><!-- Hobbies Enhanced Slider -->
+  <section id="hobbies" class="py-20 px-4">
+   <div class="container mx-auto max-w-6xl">
+    <h2 class="text-3xl md:text-4xl font-bold orbitron text-center mb-12 text-glow reveal">Nebula Carousel 🌌</h2>
+    <div class="cosmic-slider reveal" style="height: 400px;">
+     <div class="slider-container" id="hobbies-slider">
+      <div class="slider-item pic-hover">
+       <div class="pic-content text-center">
+        <div class="text-6xl mb-6">
+         <i class="bi bi-pencil-square"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-4 text-glow">Visual Orbit</h3>
+        <p class="text-lg opacity-90 leading-relaxed">I draw not just to create, but to translate the unspoken. Every line is a pulse of emotion, every shade a fragment of memory. My art isn’t about perfection, it’s about resonance, a quiet chaos that feels alive.</p>
+       </div>
+      </div>
+      <div class="slider-item pic-hover">
+       <div class="pic-content text-center">
+        <div class="text-6xl mb-6">
+         <i class="bi bi-headphones"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-4 text-glow">Sound Drift</h3>
+        <p class="text-lg opacity-90 leading-relaxed">Music keeps my universe from collapsing. It’s the gravity that holds my thoughts together, the rhythm that makes sense of silence. Each melody I find is another heartbeat for the worlds I build.</p>
+       </div>
+      </div>
+      <div class="slider-item pic-hover">
+       <div class="pic-content text-center">
+        <div class="text-6xl mb-6">
+         <i class="bi bi-journal-text"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-4 text-glow">Stellar Pages</h3>
+        <p class="text-lg opacity-90 leading-relaxed">I read to escape, but also to return — to places I’ve never been, yet feel like home. Every story is a constellation, connecting the dots of who I am and who I could be.</p>
+       </div>
+      </div>
+      <div class="slider-item pic-hover">
+       <div class="pic-content text-center">
+        <div class="text-6xl mb-6">
+         <i class="bi bi-moon-stars"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-4 text-glow">Lore Reflection</h3>
+        <p class="text-lg opacity-90 leading-relaxed">When the world goes still, I dive into my own thoughts — sometimes to rebuild, sometimes to get lost. That’s where my stories are born: from reflection, from chaos, from the infinite noise of my mind turning into something that finally makes sense.</p>
+       </div>
+      </div>
+     </div><!-- Navigation Arrows -->
+     <div class="slider-arrows slider-prev" onclick="changeSlide(-1)"><span style="color: var(--neon-blue); font-size: 20px;">‹</span>
+     </div>
+     <div class="slider-arrows slider-next" onclick="changeSlide(1)"><span style="color: var(--neon-blue); font-size: 20px;">›</span>
+     </div><!-- Navigation Dots -->
+     <div class="slider-nav">
+      <div class="slider-dot active" onclick="goToSlide(0)"></div>
+      <div class="slider-dot" onclick="goToSlide(1)"></div>
+      <div class="slider-dot" onclick="goToSlide(2)"></div>
+      <div class="slider-dot" onclick="goToSlide(3)"></div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Favorite Musics -->
+  <section id="foods" class="py-20 px-4">
+   <div class="container mx-auto max-w-6xl">
+    <h2 class="text-3xl md:text-4xl font-bold orbitron text-center mb-12 text-glow reveal">currently looping</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+     <div class="glass food-card p-6 hover-float pic-hover reveal">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4">
+        <div class="text-4xl">
+         <img src="images/musics/505.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-lg font-semibold mb-2 text-center">505 — Arctic Monkeys</h3>
+       <p class="text-sm opacity-80 text-center italic">"late-night thoughts, endless replay."</p>
+      </div>
+     </div>
+     <div class="glass food-card p-6 hover-float pic-hover reveal" style="animation-delay: 0.2s;">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4">
+        <div class="text-4xl">
+         <img src="images/musics/no1.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-lg font-semibold mb-2 text-center">No.1 Party Anthem — Arctic Monkeys</h3>
+       <p class="text-sm opacity-80 text-center italic">"slow lights, soft chaos."</p>
+      </div>
+     </div>
+     <div class="glass food-card p-6 hover-float pic-hover reveal" style="animation-delay: 0.4s;">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4">
+        <div class="text-4xl">
+         <img src="images/musics/bird.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-lg font-semibold mb-2 text-center">Birds of a Feather — Billie Eilish</h3>
+       <p class="text-sm opacity-80 text-center italic">"warm, honest, kinda sweet."</p>
+      </div>
+     </div>
+     <div class="glass food-card p-6 hover-float pic-hover reveal" style="animation-delay: 0.6s;">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4">
+        <div class="text-4xl">
+         <img src="images/musics/crp.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-lg font-semibold mb-2 text-center">Creep — Radiohead</h3>
+       <p class="text-sm opacity-80 text-center italic">"weird but real, just hits."</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Characters -->
+  <section id="characters" class="py-20 px-4">
+   <div class="container mx-auto max-w-6xl">
+    <h2 class="text-3xl md:text-4xl font-bold orbitron text-center mb-12 text-glow reveal">Faces of My Universe</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div class="glass character-card p-6 hover-float pic-hover reveal text-center">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4" style="width: 100px; height: 100px;">
+        <div class="text-5xl">
+         <img src="images/chars/mortik.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-lg font-semibold mb-2">Mortyx</h3>
+       <p class="text-sm opacity-80 italic">"Once called Max. Now a name carved from grief and fire. He builds meaning out of ruin - and still burns brighter than the rest."</p>
+      </div>
+     </div>
+     <div class="glass character-card p-6 hover-float pic-hover reveal text-center" style="animation-delay: 0.3s;">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4" style="width: 100px; height: 100px;">
+        <div class="text-5xl">
+         <img src="images/chars/zura.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-lg font-semibold mb-2">Zuraa</h3>
+       <p class="text-sm opacity-80 italic">"A breaker who turns chaos into rhythm. The world bends when her mind sparks - unpredictable, raw, alive."</p>
+      </div>
+     </div>
+     <div class="glass character-card p-6 hover-float pic-hover reveal text-center" style="animation-delay: 0.6s;">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4" style="width: 100px; height: 100px;">
+        <div class="text-5xl">
+         <img src="images/chars/ev.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-lg font-semibold mb-2">Evince</h3>
+       <p class="text-sm opacity-80 italic">"The calm before the storm. Logic wrapped in empathy - he fights not to win, but to understand."</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  
+   </section><!-- Digital Creations -->
+  <section id="characters" class="py-20 px-4">
+   <div class="container mx-auto max-w-6xl">
+    <h2 class="text-3xl md:text-4xl font-bold orbitron text-center mb-12 text-glow reveal">Digital Creations</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div class="glass character-card p-6 hover-float pic-hover reveal text-center">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4" style="width: 100px; height: 100px;">
+        <div class="text-5xl">
+         <img src="images/projects/fortym.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-lg font-semibold mb-2">Fortym Aureus</h3>
+       <p class="text-sm opacity-80 italic">"A digital shrine of golden circuits."
+A mysterious interface that fuses elegance with code, designed like an artifact from another timeline.</p>
+      </div>
+     </div>
+     <div class="glass character-card p-6 hover-float pic-hover reveal text-center" style="animation-delay: 0.3s;">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4" style="width: 100px; height: 100px;">
+        <div class="text-5xl">
+         <img src="images/projects/TechnoVision.png" alt="">
+        </div>
+       </div>
+       <h3 class="text-lg font-semibold mb-2">Techno Vision</h3>
+       <p class="text-sm opacity-80 italic">"Seeing beyond the screen."
+A minimalist web concept that blends futuristic UI, soft motion, and a little touch of stardust.</p>
+      </div>
+     </div>
+     <div class="glass character-card p-6 hover-float pic-hover reveal text-center" style="animation-delay: 0.6s;">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4" style="width: 100px; height: 100px;">
+        <div class="text-5xl">
+         <img src="images/projects/trash toss trouble.jpg" alt="">
+        </div>
+       </div>
+          <h3 class="text-lg font-semibold mb-2">Trash Toss Troublee</h3>
+       <p class="text-sm opacity-80 italic">"TTT Catzz vs Dogzz - the chaos begins."
+A chaotic yet adorable game where a cat and dog settle their rivalry… by throwing literal trash. Pure nonsense. Pure fun.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+    </section><!-- Physical Creations -->
+  <section id="characters" class="py-20 px-4">
+   <div class="container mx-auto max-w-6xl">
+    <h2 class="text-3xl md:text-4xl font-bold orbitron text-center mb-12 text-glow reveal">Physical Creations</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div class="glass character-card p-6 hover-float pic-hover reveal text-center">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4" style="width: 100px; height: 100px;">
+        <div class="text-5xl">
+         <img src="images/projects/vol-2-cover-zuraa(used).png" alt="">
+        </div>
+       </div>
+       <h3 class="text-lg font-semibold mb-2">Zenic : Clash To Peace</h3>
+       <p class="text-sm opacity-80 italic">"War may shatter worlds, but peace rebuilds souls."
+A manga about two beings destined to collide, learning that strength isn’t in destruction - but understanding.</p>
+      </div>
+     </div>
+     <div class="glass character-card p-6 hover-float pic-hover reveal text-center" style="animation-delay: 0.3s;">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4" style="width: 100px; height: 100px;">
+        <div class="text-5xl">
+         <img src="images/projects/smartcarFTM01.jpg" alt="">
+        </div>
+       </div>
+       <h3 class="text-lg font-semibold mb-2">SmartCar FTM-01</h3>
+       <p class="text-sm opacity-80 italic">"Driven by logic, powered by curiosity."
+A custom-built mini smart vehicle experiment - merging sensors, AI, and a little madness.</p>
+      </div>
+     </div>
+     <div class="glass character-card p-6 hover-float pic-hover reveal text-center" style="animation-delay: 0.6s;">
+      <div class="pic-content">
+       <div class="pic-avatar mb-4" style="width: 100px; height: 100px;">
+        <div class="text-5xl">
+         <img src="images/projects/smarttrashbinFTM02.jpg" alt="">
+        </div>
+       </div>
+          <h3 class="text-lg font-semibold mb-2">SmartTrashBin FTM-02</h3>
+       <p class="text-sm opacity-80 italic">"Even trash deserves innovation."
+A self-sorting trash bin prototype designed to recognize, sort, and flex its mechanical brain.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Reflections -->
+  <section id="reflections" class="py-20 px-4 relative">
+   <div class="container mx-auto max-w-4xl text-center">
+    <h2 class="text-3xl md:text-4xl font-bold orbitron mb-12 text-glow reveal">Astral Whispers</h2>
+    <div class="glass-strong p-8 md:p-12 reveal">
+     <p id="reflection-text" class="text-xl md:text-2xl font-light leading-relaxed text-glow">"In silence, the universe whispers back."</p>
+     <p class="text-base opacity-70 mt-6">
+"In silence, the universe whispers back."
+
+Sometimes, I find meaning not in noise, but in the spaces between it, 
+where thoughts drift like stardust and feelings float unspoken.
+It’s where I listen… not just to the world, but to the quiet inside me.</p>
+    </div>
+   </div>
+  </section><!-- Contact Section -->
+  <section id="contact" class="py-20 px-4">
+   <div class="container mx-auto max-w-2xl">
+    <h2 class="text-3xl md:text-4xl font-bold orbitron text-center mb-12 text-glow reveal">Reach My Orbit</h2>
+    <div class="glass-strong p-8 reveal">
+     <form class="space-y-6" onsubmit="handleContactForm(event)">
+      <div><label for="name" class="block text-sm font-medium mb-2">Name</label> <input type="text" id="name" name="name" required class="w-full p-3 glass border-0 rounded-lg focus:glow-blue focus:outline-none text-white placeholder-gray-300" placeholder="Your cosmic name">
+      </div>
+      <div><label for="email" class="block text-sm font-medium mb-2">Email</label> <input type="email" id="email" name="email" required class="w-full p-3 glass border-0 rounded-lg focus:glow-blue focus:outline-none text-white placeholder-gray-300" placeholder="your@email.com">
+      </div>
+      <div><label for="message" class="block text-sm font-medium mb-2">Message</label> <textarea id="message" name="message" rows="4" required class="w-full p-3 glass border-0 rounded-lg focus:glow-blue focus:outline-none text-white placeholder-gray-300 resize-none" placeholder="Share your thoughts from across the galaxy..."></textarea>
+      </div><button type="submit" class="cosmic-btn w-full"> Send Message to the Stars </button>
+     </form>
+    
+     <div class="text-center mt-8">
+      <p id="contact-message" class="text-sm opacity-80 mb-6">You've reached my orbit. Let's connect among the stars.</p>
+      <div class="flex justify-center space-x-6"><a href="https://www.instagram.com/leviathannuh/" class="text-2xl hover:text-glow transition-all pulse-glow"><i class="bi bi-instagram" style="width: 10px;"></i></a> <a href="https://wa.me/qr/W7CZJB7L7ET5A1" class="text-2xl hover:text-glow transition-all pulse-glow"><i class="bi bi-whatsapp" style="width: 10px;"></i></a> <a href="mailto:m.ichsan.apr.business@gmail.com?subject=Hello%20from%20your%20portfolio!" class="text-2xl hover:text-glow transition-all pulse-glow"><i class="bi bi-envelope" style="width: 10px;"></i></a> <a href="https://open.spotify.com/playlist/5jCnyZyCEPJ9nqqpm8J5Mr?si=F81xPpmNRlShRNNi_J0IHw" class="text-2xl hover:text-glow transition-all pulse-glow"><i class="bi bi-spotify" style="width: 10px;"></i></a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="text-center mt-8">
+      <p id="contact-message" class="text-sm opacity-80 mb-6">Check my partner universe to!</p>
+      <button class="cosmic-btn hover-float mt-8"><a href=""> Kodrat R.A </a></button>
+  </section><!-- Footer -->
+  <footer class="py-8 text-center glass-strong">
+   <p class="text-sm opacity-70">© 2025 Cosmic ENTJ Dream. Made with love.</p>
+  </footer>
+  <script>
+        // Configuration object for editable content
+        const defaultConfig = {
+            main_title: "M. Ichsan Apriansyah",
+            subtitle: "ENTJ-T • Web Designer • Illustrator • Comic Author",
+            about_title: "About me!",
+            about_description: "ohhh yess",
+            contact_message: "You've reached my orbit. Let's connect among the stars"
+        };
+
+        let config = { ...defaultConfig };
+
+        // Initialize Element SDK
+        async function initializeSDK() {
+            if (window.elementSdk) {
+                await window.elementSdk.init({
+                    defaultConfig: defaultConfig,
+                    onConfigChange: async (newConfig) => {
+                        config = { ...config, ...newConfig };
+                        updateUI();
+                    },
+                    mapToCapabilities: (config) => ({
+                        recolorables: [],
+                        borderables: [],
+                        fontEditable: undefined,
+                        fontSizeable: undefined
+                    }),
+                    mapToEditPanelValues: (config) => new Map([
+                        ["main_title", config.main_title || defaultConfig.main_title],
+                        ["subtitle", config.subtitle || defaultConfig.subtitle],
+                        ["about_title", config.about_title || defaultConfig.about_title],
+                        ["about_description", config.about_description || defaultConfig.about_description],
+                        ["contact_message", config.contact_message || defaultConfig.contact_message]
+                    ])
+                });
+            }
+        }
+
+        // Update UI based on config
+        function updateUI() {
+            const mainTitle = document.getElementById('main-title');
+            const subtitle = document.getElementById('subtitle');
+            const aboutTitle = document.getElementById('about-title');
+            const aboutDescription = document.getElementById('about-description');
+            const contactMessage = document.getElementById('contact-message');
+
+            if (mainTitle) mainTitle.textContent = config.main_title || defaultConfig.main_title;
+            if (subtitle) subtitle.textContent = config.subtitle || defaultConfig.subtitle;
+            if (aboutTitle) aboutTitle.textContent = config.about_title || defaultConfig.about_title;
+            if (aboutDescription) aboutDescription.textContent = config.about_description || defaultConfig.about_description;
+            if (contactMessage) contactMessage.textContent = config.contact_message || defaultConfig.contact_message;
+        }
+
+        // Smooth scroll function
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Scroll reveal animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        // Create floating particles
+        function createParticles() {
+            const container = document.getElementById('particles-container');
+            const particleCount = 20;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        // Handle contact form
+        function handleContactForm(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            // Show success message
+            const button = form.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            button.textContent = '✨ Message Sent to the Stars!';
+            button.style.background = 'linear-gradient(45deg, #00ff88, #00bfff)';
+            
+            // Reset form
+            form.reset();
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = 'linear-gradient(45deg, var(--neon-blue), var(--galaxy-purple))';
+            }, 3000);
+        }
+
+        // Typing effect for subtitle
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.textContent = '';
+            element.style.borderRight = '2px solid rgba(0, 191, 255, 0.8)';
+            
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    // Remove cursor after typing is complete
+                    setTimeout(() => {
+                        element.style.borderRight = 'none';
+                    }, 1000);
+                }
+            }
+            type();
+        }
+
+        // Slider functionality
+        let currentSlide = 0;
+        const totalSlides = 4;
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            updateSlider();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const slider = document.getElementById('hobbies-slider');
+            const dots = document.querySelectorAll('.slider-dot');
+            
+            if (slider) {
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        // Auto-slide functionality
+        function startAutoSlide() {
+            setInterval(() => {
+                changeSlide(1);
+            }, 5000);
+        }
+
+        // Welcome modal functionality
+        function showWelcomeModal() {
+            const modal = document.getElementById('welcome-modal');
+            if (modal) {
+                setTimeout(() => {
+                    modal.classList.add('show');
+                }, 1000);
+            }
+        }
+
+        function startJourney() {
+            const modal = document.getElementById('welcome-modal');
+            const whitehole = document.getElementById('whitehole');
+            
+            if (whitehole) {
+                whitehole.classList.add('active');
+            }
+            
+            setTimeout(() => {
+                if (modal) {
+                    modal.classList.remove('show');
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                    }, 600);
+                }
+            }, 800);
+            
+            setTimeout(() => {
+                if (whitehole) {
+                    whitehole.classList.remove('active');
+                }
+            }, 2000);
+        }
+
+        // Create nearby stars being consumed
+        function createNearbyStars() {
+            const container = document.getElementById('nearby-stars');
+            if (!container) return;
+            
+            const starCount = 8;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'nearby-star';
+                star.style.animationDelay = (i * 1.5) + 's';
+                star.style.animationDuration = (8 + Math.random() * 4) + 's';
+                
+                // Random starting positions around the blackhole
+                const angle = (i / starCount) * 360;
+                star.style.transform = `rotate(${angle}deg)`;
+                
+                container.appendChild(star);
+            }
+        }
+
+        // Create light particles being stretched
+        function createLightParticles() {
+            const container = document.getElementById('light-particles');
+            if (!container) return;
+            
+            const particleCount = 12;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'light-particle';
+                particle.style.animationDelay = (i * 0.5) + 's';
+                particle.style.animationDuration = (6 + Math.random() * 3) + 's';
+                
+                container.appendChild(particle);
+            }
+        }
+
+        // Profile picture click interaction
+        function profilePicClick() {
+            const profilePic = document.querySelector('.profile-pic');
+            const emoji = document.querySelector('.profile-emoji');
+            
+            // Create ripple effect
+            const ripple = document.createElement('div');
+            ripple.style.cssText = `
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 0;
+                height: 0;
+                background: radial-gradient(circle, rgba(0, 191, 255, 0.6) 0%, transparent 70%);
+                border-radius: 50%;
+                animation: profile-ripple 0.8s ease-out;
+                pointer-events: none;
+                z-index: 1;
+            `;
+            
+            profilePic.appendChild(ripple);
+            
+            // Change emoji temporarily
+            const originalEmoji = emoji.textContent;
+            const emojis = ['🌟', '✨', '💫', '🌌', '🔮'];
+            const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+            
+            emoji.textContent = randomEmoji;
+            emoji.style.transform = 'scale(1.3) rotate(360deg)';
+            
+            // Reset after animation
+            setTimeout(() => {
+                emoji.textContent = originalEmoji;
+                emoji.style.transform = '';
+                ripple.remove();
+            }, 800);
+        }
+
+        // Create blackhole particles
+        function createBlackholeParticles() {
+            const container = document.getElementById('blackhole-particles');
+            if (!container) return;
+            
+            const particleCount = 15;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'blackhole-particle';
+                particle.style.animationDelay = (i * 0.8) + 's';
+                particle.style.animationDuration = (10 + Math.random() * 6) + 's';
+                
+                // Random colors for particles
+                const colors = [
+                    'rgba(0, 191, 255, 0.9)',
+                    'rgba(138, 43, 226, 0.9)',
+                    'rgba(255, 255, 255, 0.7)'
+                ];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                particle.style.background = randomColor;
+                particle.style.boxShadow = `0 0 10px ${randomColor}`;
+                
+                container.appendChild(particle);
+            }
+        }
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeSDK();
+            createParticles();
+            createNearbyStars();
+            createLightParticles();
+            createBlackholeParticles();
+            showWelcomeModal();
+            startAutoSlide();
+            
+            // Start typing effect for subtitle
+            const subtitle = document.getElementById('subtitle');
+            if (subtitle) {
+                setTimeout(() => {
+                    typeWriter(subtitle, config.subtitle || defaultConfig.subtitle, 80);
+                }, 3000); // Delay until after modal appears
+            }
+            
+            // Initial reveal check
+            revealOnScroll();
+        });
+
+        // Event listeners
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('resize', revealOnScroll);
+
+        // Add parallax effect to floating elements
+        document.addEventListener('mousemove', function(e) {
+            const floatingElements = document.querySelectorAll('.constellation-node');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            floatingElements.forEach((element, index) => {
+                const speed = (index + 1) * 0.5;
+                const x = (mouseX - 0.5) * speed * 20;
+                const y = (mouseY - 0.5) * speed * 20;
+                element.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+
+        // Add click ripple effect to cards
+        document.querySelectorAll('.glass, .glass-strong').forEach(card => {
+            card.addEventListener('click', function(e) {
+                const ripple = document.createElement('div');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}px;
+                    top: ${y}px;
+                    background: radial-gradient(circle, rgba(0, 191, 255, 0.3) 0%, transparent 70%);
+                    border-radius: 50%;
+                    transform: scale(0);
+                    animation: ripple 0.6s ease-out;
+                    pointer-events: none;
+                    z-index: 1;
+                `;
+                
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Add ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes profile-ripple {
+                0% {
+                    width: 0;
+                    height: 0;
+                    opacity: 1;
+                }
+                50% {
+                    width: 200px;
+                    height: 200px;
+                    opacity: 0.6;
+                }
+                100% {
+                    width: 300px;
+                    height: 300px;
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+    <script>
+  const starContainer = document.querySelector('.stars');
+  const starCount = 200; // jumlah bintang 🌠
+
+  for (let i = 0; i < starCount; i++) {
+    const star = document.createElement('div');
+    const size = Math.random() * 2 + 1; // ukuran random 1–3px
+    const x = Math.random() * 100; // posisi X acak (persen)
+    const y = Math.random() * 100; // posisi Y acak (persen)
+    
+    star.classList.add('star');
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.top = `${y}%`;
+    star.style.left = `${x}%`;
+    starContainer.appendChild(star);
+  }
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99675fcf559aea7d',t:'MTc2MTc5MDIwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
